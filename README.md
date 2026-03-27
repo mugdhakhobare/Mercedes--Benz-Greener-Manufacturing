@@ -1,67 +1,95 @@
-# Mercedes--Benz-Greener-Manufacturing
-Mercedes-Benz Greener Manufacturing 🚗🌱
-📌 Project Overview
+# 🚗 Mercedes-Benz Greener Manufacturing
 
-This project aims to reduce the time a Mercedes-Benz car spends on the test bench by predicting testing time using machine learning techniques.
-By optimizing predictions, the manufacturing process becomes faster and more efficient, reducing carbon emissions.
+> Machine Learning project to predict and reduce the time a Mercedes-Benz car spends on the test bench.
 
-🎯 Problem Statement
+---
 
-Mercedes-Benz produces cars with many feature combinations. Each configuration requires testing before release.
-The goal is to build a model that predicts test bench time based on car features.
+## 📖 Project Description
 
-🛠️ Tasks Performed
-✔️ Removed zero-variance columns
-✔️ Checked for null values
-✔️ Label Encoding for categorical variables
-✔️ Dimensionality Reduction using PCA
-✔️ Model training using XGBoost
-✔️ Generated predictions for test dataset
-📂 Dataset
-train.csv → Training dataset with target variable y
-test.csv → Test dataset for predictions
-⚙️ Technologies Used
-Python 🐍
-Pandas
-NumPy
-Scikit-learn
-XGBoost
-Jupyter Notebook
-🚀 Workflow
-Load Dataset
-Remove Zero Variance Columns
-Handle Missing Values
-Label Encode Categorical Features
-Apply PCA for Dimensionality Reduction
-Train XGBoost Regressor
-Evaluate Model (R² Score)
-Predict Test Data
-Create Submission File
-📊 Model Used
+Mercedes-Benz manufactures premium cars with multiple feature combinations. Each unique configuration requires testing before delivery.
+This project builds a **machine learning model** that predicts test bench time using feature data, helping optimize manufacturing efficiency and reduce carbon emissions. 🌱
 
-XGBoost Regressor
+---
 
-n_estimators = 500
-learning_rate = 0.05
-max_depth = 4
-subsample = 0.8
-colsample_bytree = 0.8
-▶️ How to Run
-git clone <your-repo-link>
-cd Mercedes-Benz-Greener-Manufacturing
+## 🎯 Objectives
 
-Open Jupyter Notebook and run:
+* Reduce testing time
+* Improve production efficiency
+* Apply dimensionality reduction techniques
+* Build an optimized regression model
+* Generate predictions for unseen data
 
-Mercedes_Benz_Greener_Manufacturing.ipynb
-📈 Output
+---
 
-The model generates:
+## 📂 Dataset Information
 
-submission.csv
+The project uses two datasets:
 
-with predicted test bench time.
+| File        | Description                            |
+| ----------- | -------------------------------------- |
+| `train.csv` | Training data with target variable `y` |
+| `test.csv`  | Test data for prediction               |
 
-📁 Project Structure
+Target variable:
+
+* **y** → Time spent on test bench
+
+---
+
+## 🛠️ Technologies & Libraries
+
+* Python 🐍
+* Pandas
+* NumPy
+* Scikit-learn
+* XGBoost
+* Jupyter Notebook
+
+---
+
+## ⚙️ Project Workflow
+
+1. Load datasets
+2. Remove zero-variance features
+3. Check missing values
+4. Encode categorical variables (Label Encoding)
+5. Apply PCA (Dimensionality Reduction)
+6. Split training and validation data
+7. Train XGBoost Regressor
+8. Evaluate model using R² Score
+9. Predict test dataset
+10. Generate submission file
+
+---
+
+## 🧠 Model Used
+
+### XGBoost Regressor
+
+```python
+XGBRegressor(
+    n_estimators=500,
+    learning_rate=0.05,
+    max_depth=4,
+    subsample=0.8,
+    colsample_bytree=0.8,
+    random_state=42
+)
+```
+
+---
+
+## 📊 Evaluation Metric
+
+* **R² Score** (Coefficient of Determination)
+
+Higher score indicates better model performance.
+
+---
+
+## 📁 Project Structure
+
+```
 Mercedes-Benz-Greener-Manufacturing
 │
 ├── train.csv
@@ -69,12 +97,68 @@ Mercedes-Benz-Greener-Manufacturing
 ├── Mercedes_Benz_Greener_Manufacturing.ipynb
 ├── submission.csv
 └── README.md
-✨ Future Improvements
-Hyperparameter tuning
-Feature selection
-Ensemble models
-Cross-validation
-👩‍💻 Author
+```
 
-Mugdha Khobare
-Machine Learning Enthusiast
+---
+
+## ▶️ How to Run the Project
+
+### Step 1: Clone Repository
+
+```bash
+git clone https://github.com/your-username/Mercedes-Benz-Greener-Manufacturing.git
+```
+
+### Step 2: Navigate to Folder
+
+```bash
+cd Mercedes-Benz-Greener-Manufacturing
+```
+
+### Step 3: Install Dependencies
+
+```bash
+pip install pandas numpy scikit-learn xgboost
+```
+
+### Step 4: Run Notebook
+
+Open Jupyter Notebook and run:
+
+```
+Mercedes_Benz_Greener_Manufacturing.ipynb
+```
+
+---
+
+## 📈 Output
+
+The model generates:
+
+```
+submission.csv
+```
+
+Containing:
+
+* ID
+* Predicted test bench time
+
+---
+
+## 🔮 Future Improvements
+
+* Hyperparameter tuning
+* Feature importance analysis
+* Ensemble learning
+* Cross-validation
+* Deep learning approach
+
+---
+
+## 👩‍💻 Author
+
+**Mugdha Khobare**
+Machine Learning Enthusiast 🚀
+
+
